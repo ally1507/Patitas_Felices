@@ -1,11 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fundacion Patitas Felices — Rescate, cuidado y reubicacion de animales en Colombia. Adopta, dona o se voluntario."
+    />
+    <meta name="author" content="Fundacion Patitas Felices" />
+    <title>Patitas Felices — Fundacion de Rescate Animal</title>
+    <link rel="stylesheet" href="styles.css"> 
+   </head>
+
+  <body>
+
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+
+        <a href="#inicio" class="brand" aria-label="Patitas Felices - ir al inicio">
+          <span class="brand-name">Patitas <strong>Felices</strong></span>
+        </a>
+
+        <nav class="nav-main" aria-label="Navegacion principal">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" />
+          <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-list" role="list">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#adoptar" class="nav-link">Adoptar</a></li>
+            <li><a href="#galeria" class="nav-link">Galeria</a></li>
+            <li><a href="#donaciones" class="nav-link">Donaciones</a></li>
+            <li><a href="#voluntariado" class="nav-link">Voluntariado</a></li>
+            <li><a href="#contacto" class="nav-link nav-link--cta">Contacto</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section id="inicio" class="section-hero" aria-labelledby="hero-titulo">
+
+       
+        <div class="hero-carrusel" role="region" aria-label="Fotos de animales y voluntarios">
+          <ul class="carrusel-track" role="list">
+            <li class="carrusel-slide slide-1">
+              <figure>
+                <img
+                  src="img"
+                  alt="Voluntarios rescatando un perro en la calle"
+                  width="1440"
+                  height="720"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+                <figcaption class="slide-texto">Cada rescate es una nueva historia</figcaption>
+              </figure>
+            </li>
+            <li class="carrusel-slide slide-2">
+              <figure>
+                <img
+                  src="img"
+                  alt="Veterinaria atendiendo una gata recien rescatada"
+                  width="1440"
+                  height="720"
+                  loading="lazy"
+                />
+                <figcaption class="slide-texto">Cuidamos cada vida con dedicacion</figcaption>
+              </figure>
+            </li>
+            <li class="carrusel-slide slide-3">
+              <figure>
+                <img
+                  src="img"
+                  alt="Familia adoptando un perro en la fundacion"
+                  width="1440"
+                  height="720"
+                  loading="lazy"
+                />
+                <figcaption class="slide-texto">Familias que cambian vidas</figcaption>
+              </figure>
+            </li>
+            <li class="carrusel-slide slide-4">
+              <figure>
+                <img
+                  src="img"
+                  alt="Grupo de voluntarios en una jornada de adopcion"
+                  width="1440"
+                  height="720"
+                  loading="lazy"
+                />
+                <figcaption class="slide-texto">Voluntarios que hacen la diferencia</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-contenido">
+          <p class="hero-subtitulo">Fundacion de Rescate Animal</p>
+          <h1 id="hero-titulo" class="hero-titulo">
+            Patitas <span class="hero-titulo--acento">Felices</span>
+          </h1>
+          <p class="hero-eslogan">
+            Cada animal merece una segunda oportunidad.<br />
+            Tu puedes ser parte del cambio.
+          </p>
+          <div class="hero-botones">
+            <a href="#adoptar" class="btn btn--principal btn--grande">Adopta ahora</a>
+            <a href="#nosotros" class="btn btn--borde btn--grande">Conocenos</a>
+          </div>
+        </div>
+
+      </section>
