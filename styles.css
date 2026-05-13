@@ -1279,8 +1279,6 @@ address { font-style: normal; }
   .cifras-lista       { grid-template-columns: repeat(2, 1fr); }
  
   .galeria-mosaico    { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-  .galeria-item--ancho,
-  .galeria-item--alto { grid-column: span 1; grid-row: span 1; }
  
   .fila-campos { grid-template-columns: 1fr; }
  
