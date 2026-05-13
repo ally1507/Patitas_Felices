@@ -930,4 +930,382 @@ address { font-style: normal; }
 }
  
 .contacto-detalle a:hover { color: var(--naranja); }
+ .redes-sociales__titulo {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--verde);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
  
+.redes-lista {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+ 
+.red-social {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: var(--radio-pill);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  background: var(--gris-suave);
+  color: var(--gris-texto);
+  border: 1px solid var(--gris-borde);
+  transition: background var(--transicion), color var(--transicion);
+}
+.red-social--instagram:hover { background: #E1306C; color: var(--blanco); border-color: #E1306C; }
+.red-social--facebook:hover  { background: #1877F2; color: var(--blanco); border-color: #1877F2; }
+.red-social--tiktok:hover    { background: #000000; color: var(--blanco); border-color: #000000; }
+ 
+/* Formulario */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--crema);
+  border-radius: var(--radio-lg);
+  padding: 36px 32px;
+  border: 1px solid var(--gris-borde);
+}
+ 
+.alerta {
+  padding: 12px 16px;
+  border-radius: var(--radio);
+  font-weight: 700;
+  font-size: 14px;
+  display: none;
+}
+ 
+.alerta--exito { background: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; display: block; }
+.alerta--error { background: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; }
+ 
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+ 
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ 
+.campo-etiqueta {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gris-texto);
+}
+ 
+.campo-etiqueta abbr {
+  color: var(--naranja);
+  text-decoration: none;
+  margin-left: 2px;
+}
+ 
+.campo-input,
+.campo-select,
+.campo-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--gris-borde);
+  border-radius: var(--radio);
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: var(--gris-texto);
+  background: var(--blanco);
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+  outline: none;
+  appearance: none;
+}
+ 
+.campo-input:focus,
+.campo-select:focus,
+.campo-textarea:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(45,106,79,.12);
+}
+ 
+.campo-textarea { resize: vertical; min-height: 120px; }
+ 
+/* Estado de error */
+.campo--error .campo-input,
+.campo--error .campo-select,
+.campo--error .campo-textarea {
+  border-color: #DC3545;
+  background: #FFF8F8;
+}
+.campo--error .campo-input:focus,
+.campo--error .campo-select:focus,
+.campo--error .campo-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(220,53,69,.12);
+}
+ 
+.campo-error-msg {
+  font-size: 12px;
+  color: #DC3545;
+  font-weight: 700;
+  display: none;
+}
+.campo--error .campo-error-msg { display: block; }
+ 
+/* Estado de exito */
+.campo--exito .campo-input,
+.campo--exito .campo-select,
+.campo--exito .campo-textarea {
+  border-color: #28A745;
+  background: #F8FFF9;
+}
+ 
+.campo-exito-msg {
+  font-size: 12px;
+  color: #28A745;
+  font-weight: 700;
+  display: none;
+}
+.campo--exito .campo-exito-msg { display: block; }
+ 
+/* Select custom arrow */
+.campo-select-wrapper {
+  position: relative;
+}
+.campo-select-wrapper .campo-select { padding-right: 36px; }
+.campo-select-flecha {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gris-medio);
+  pointer-events: none;
+  font-size: 14px;
+}
+ 
+.campo-ayuda {
+  font-size: 12px;
+  color: var(--gris-medio);
+}
+ 
+/* Checkbox */
+.campo--checkbox { flex-direction: row; align-items: flex-start; gap: 10px; }
+ 
+.campo-checkbox-etiqueta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+ 
+.campo-checkbox {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--verde);
+  cursor: pointer;
+}
+ 
+.campo-checkbox-texto {
+  font-size: 14px;
+  color: var(--gris-medio);
+  line-height: 1.5;
+}
+.campo-checkbox-texto a { color: var(--verde); text-decoration: underline; }
+ 
+/* =============================================
+   FOOTER
+============================================= */
+ 
+.site-footer {
+  background: var(--gris-texto);
+  color: rgba(255,255,255,.8);
+}
+ 
+.footer-inner {
+  display: flex;
+  gap: 48px;
+  padding: 56px 32px 40px;
+  max-width: 1200px;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+ 
+.footer-col { flex: 1; min-width: 160px; }
+ 
+.footer-col--marca { flex: 1.6; }
+ 
+.footer-col--marca .brand-name { color: var(--blanco); }
+.footer-col--marca .brand-name strong { color: var(--naranja); }
+ 
+.footer-eslogan {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+}
+ 
+.footer-col__titulo {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blanco);
+  margin-bottom: 16px;
+}
+ 
+.footer-nav ul,
+.footer-contacto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.footer-nav a,
+.footer-contacto a,
+.footer-contacto li {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color var(--transicion);
+  line-height: 1.5;
+}
+.footer-nav a:hover,
+.footer-contacto a:hover { color: var(--naranja); }
+ 
+.footer-redes .redes-lista { flex-direction: column; gap: 8px; }
+.footer-redes .red-social {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.7);
+  border-color: rgba(255,255,255,.12);
+}
+.footer-redes .red-social:hover { background: var(--naranja); color: var(--blanco); border-color: var(--naranja); }
+ 
+.footer-base {
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  max-width: 1200px;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+ 
+.footer-copyright,
+.footer-creditos {
+  font-size: 13px;
+  color: rgba(255,255,255,.4);
+}
+ 
+.footer-creditos a { color: var(--naranja); }
+.footer-creditos a:hover { text-decoration: underline; }
+ 
+/* =============================================
+   RESPONSIVE — TABLET (max 1024px)
+============================================= */
+ 
+@media (max-width: 1024px) {
+ 
+  .destacados-grilla  { grid-template-columns: repeat(2, 1fr); }
+  .animales-grilla    { grid-template-columns: repeat(2, 1fr); }
+  .planes-donacion    { grid-template-columns: 1fr; gap: 16px; }
+  .plan-donacion--destacado { transform: none; }
+ 
+  .mision-vision-grilla { grid-template-columns: 1fr; }
+  .cifras-lista         { grid-template-columns: repeat(2, 1fr); }
+ 
+  .voluntariado-grilla { grid-template-columns: 1fr; }
+  .voluntariado-cta    { position: static; }
+ 
+  .contacto-layout { grid-template-columns: 1fr; }
+ 
+  .galeria-mosaico { grid-template-columns: repeat(2, 1fr); }
+  .galeria-item--ancho { grid-column: span 1; }
+ 
+  .hero-contenido { padding: 100px 40px 60px; }
+}
+ 
+/* =============================================
+   RESPONSIVE — MOBILE (max 768px)
+============================================= */
+ 
+@media (max-width: 768px) {
+ 
+  /* Header mobile */
+  .site-header { padding: 0 20px; position: relative; flex-wrap: wrap; height: auto; padding-block: 14px; }
+ 
+  .nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 10;
+  }
+ 
+  .nav-toggle-label span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--gris-texto);
+    border-radius: 2px;
+    transition: transform var(--transicion), opacity var(--transicion);
+  }
+ 
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 16px 0 8px;
+    gap: 2px;
+  }
+ 
+  .nav-toggle-input:checked ~ .nav-list { display: flex; }
+ 
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(2) { opacity: 0; }
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+ 
+  .nav-link { width: 100%; border-radius: var(--radio); }
+ 
+  /* Secciones */
+  .section-destacados,
+  .section-mision,
+  .section-galeria,
+  .section-adoptar,
+  .section-testimonios,
+  .section-donaciones,
+  .section-voluntariado,
+  .section-contacto { padding: 56px 0; }
+ 
+  .section-encabezado { margin-bottom: 32px; }
+ 
+  .destacados-grilla  { grid-template-columns: 1fr; }
+  .animales-grilla    { grid-template-columns: 1fr; }
+  .testimonios-lista  { grid-template-columns: 1fr; }
+  .cifras-lista       { grid-template-columns: repeat(2, 1fr); }
+ 
+  .galeria-mosaico    { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .galeria-item--ancho,
+  .galeria-item--alto { grid-column: span 1; grid-row: span 1; }
+ 
+  .fila-campos { grid-template-columns: 1fr; }
+ 
+  .hero-contenido { padding: 80px 24px 60px; }
+  .hero-titulo    { font-size: 36px; }
+  .hero-botones   { flex-direction: column; }
+  .hero-botones .btn { width: 100%; text-align: center; }
+ 
+  .footer-inner { flex-direction: column; gap: 32px; padding: 40px 24px 28px; }
+  .footer-base  { flex-direction: column; text-align: center; padding: 16px 24px; }
+ 
+  .formulario-contacto { padding: 24px 20px; }
+  .accesos-rapidos { flex-direction: column; align-items: center; }
+}
