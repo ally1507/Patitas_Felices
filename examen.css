@@ -1,3 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap');
+
+
+:root {
+  --naranja:        #E8682A;
+  --naranja-claro:  #FFF0E8;
+  --naranja-hover:  #D05820;
+  --verde:          #2D6A4F;
+  --verde-claro:    #EAF4EE;
+  --verde-hover:    #1E4D39;
+  --crema:          #FDF8F3;
+  --blanco:         #FFFFFF;
+  --gris-texto:     #3D3D3D;
+  --gris-suave:     #F5F5F0;
+  --gris-borde:     #E0DDD8;
+  --gris-medio:     #7A7A7A;
+  --sombra-sm:      0 2px 8px rgba(0,0,0,.07);
+  --sombra-md:      0 4px 20px rgba(0,0,0,.10);
+  --sombra-lg:      0 8px 40px rgba(0,0,0,.13);
+  --radio:          12px;
+  --radio-lg:       20px;
+  --radio-pill:     999px;
+  --transicion:     0.25s ease;
+}
+
+
+.section-galeria {
+  padding: 80px 0;
+  background: var(--blanco);
+}
+
+.galeria-subtitulo {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gris-medio);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+/* Grid uniforme 3 columnas */
+.galeria-mosaico {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 18px;
+}
+
+/* Cada ítem igual*/
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f5f5f5;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.galeria-item:hover {
+  transform: translateY(-5px);
+}
+
+.galeria-item figure {
+  width: 100%;
+  height: 100%;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom al hacer hover */
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+.galeria-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: var(--blanco);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.galeria-item:hover figcaption {
+  opacity: 1;
+}
+
+/* Tablet: 2 columnas */
+@media (max-width: 768px) {
+  .galeria-mosaico {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 480px) {
+  .galeria-mosaico {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section-testimonios {
   padding: 80px 0;
   background: var(--verde);
