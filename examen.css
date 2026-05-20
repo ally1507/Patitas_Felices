@@ -1,0 +1,50 @@
+.section-testimonios {
+  padding: 80px 0;
+  background: var(--verde);
+}
+ 
+.section-testimonios .section-titulo { color: var(--blanco); }
+ 
+.testimonios-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+ 
+.tarjeta-testimonio {
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radio-lg);
+  padding: 32px 28px;
+  backdrop-filter: blur(6px);
+  transition: background var(--transicion);
+}
+.tarjeta-testimonio:hover { background: rgba(255,255,255,.16); }
+ 
+.testimonio-texto {
+  font-size: 15px;
+  color: rgba(255,255,255,.9);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+ 
+.testimonio-autor {
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 14px;
+}
+ 
+.testimonio-autor cite { font-style: normal; }
+ 
+.testimonio-autor strong {
+  display: block;
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+}
+ 
+.testimonio-rol {
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+}
